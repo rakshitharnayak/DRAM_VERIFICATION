@@ -33,11 +33,7 @@ function new (string name = "dram_cov", uvm_component parent);
 	  CovPort = new;
 endfunction
 
-function void build_phase(uvm_phase phase);
-    super.build_phase(phase);
-	//pkt=dram_seq_item::type_id::create("pkt");
-    //CovPort = new("CovPort",this);
-endfunction
+
 	  
 virtual function void write (T t);
 	`uvm_info("SEQ","SEQUENCE TRANSACTIONS",UVM_NONE);
