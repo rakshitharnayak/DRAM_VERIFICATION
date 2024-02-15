@@ -2,7 +2,7 @@ import uvm_pkg::*;
 `include "uvm_macros.svh"
 `include "INTERFACE.sv"
 //`include "DESIGN.sv"
-// `include "DUT.sv"
+ `include "DUT.sv"
 `include "SEQ_ITEM.sv"
 `include "SEQ.sv"
 `include  "SEQR.sv"
@@ -16,7 +16,7 @@ import uvm_pkg::*;
 `include "ENV.sv"
 `include "TEST.sv"
 
-module dram_top();
+module TOP();
 bit clk;
 
 initial

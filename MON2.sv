@@ -29,6 +29,7 @@ begin
 if(inf.wr1==1) begin
 pkt1.data_out=inf.data1_out;
 pkt1.add=inf.add1	;
+pkt1.wr = inf.wr1;
 `uvm_info("MON2","MON2 TRANSACTIONS",UVM_NONE)
 end
 end

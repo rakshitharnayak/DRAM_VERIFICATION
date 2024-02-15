@@ -25,20 +25,26 @@ endfunction
 endtask
 */
 task body();
-pkt=dram_seq_item::type_id::create("pkt");
-repeat(10)
+//pkt=dram_seq_item::type_id::create("pkt");
+repeat(5000)
 begin
+
+pkt=dram_seq_item::type_id::create("pkt");
 start_item(pkt);
 //pkt.add=calc_addr(addr1);
 //pkt.data_in=calc_datain(data1);
 assert(pkt.randomize());
 pkt.wr=0;
+$display("WRITE");
 pkt.print();
 //$display("1 data_in=%d,add=%d,wr=%d",pkt.data_in,pkt.add,pkt.wr);
 finish_item(pkt);
 
+//read
+pkt=dram_seq_item::type_id::create("pkt");
 start_item(pkt);
 pkt.wr=1;
+$display("READ");
 pkt.print();
 //$display("2 data_in=%d,add=%d,wr=%d",pkt.data_in,pkt.add,pkt.wr);
 finish_item(pkt);
@@ -74,4 +80,4 @@ endcase
 end
 endfunction
 */
-Endclass
+endclass
